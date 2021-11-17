@@ -3,6 +3,7 @@ url: "https://recipes.foxat.de"
 baseurl: ""
 
 encoding: utf-8
+github: [metadata] 
 
 # Markdown settings
 markdown: kramdown
