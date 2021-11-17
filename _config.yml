@@ -1,0 +1,66 @@
+repository: DeveloperTK/recipes
+url: "https://recipes.foxat.de"
+baseurl: ""
+
+encoding: utf-8
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Timezone
+timezone: 'Europe/Berlin'
+
+# Files to exclude
+exclude:
+  - .envrc
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - bin
+  - images
+  - recipes/TEMPLATE.md
+
+# Jekyll Plugins
+plugins:
+  - jekyll-default-layout
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jemoji
+
+# jekyll-titltes-from-headings config
+titles_from_headings:
+  enabled:     true
+  strip_title: false
+  collections: false
+
+# Layout
+theme: jekyll-theme-primer
+title: Recipes
+
+# Metadata
+author:
+  name: Christian Schliz
+  email: code@foxat.de
+  github: DeveloperTK
+
+# Colletctions
+collections:
+  recipes:
+    output: true
+
+include:
+  - recipes
+  - index.md
+
+defaults:
+  - scope:
+      path: recipes
+    values:
+      layout: default
+      recipe: true
